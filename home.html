@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>Home</title>
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,6 +28,17 @@ body, html {
   min-height: 100%;
 }
 
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("/w3images/parallax2.jpg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("/w3images/parallax3.jpg");
+  min-height: 400px;
+}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -57,10 +68,23 @@ body, html {
     <a href="https://site.nhd.org/68483938/end" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Conclusion</a>
   </div>
 
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="https://site.nhd.org/68483938/Background" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Background</a>
+    <a href="https://site.nhd.org/68483938/research_question_thesis" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Thesis Research Question</a>
+    <a href="https://site.nhd.org/68483938/Early_Views_on_the_Revolution" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Early Views on the Revolution</a>
+    <a href="https://site.nhd.org/68483938/Later_Views_of_Revolution" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Later Views on the Revolution</a>
+    <a href="https://site.nhd.org/68483938/The_Change_in_Written_Work" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> The Change in Written Work</a>
+    <a href="https://site.nhd.org/68483938/end" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Conclusion</a>
+ 
+  </div>
+</div>
+
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">The <span class="w3-hide-small">Revolution</span> Contreversy:</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">The <span class="w3-hide-small">Revolution</span> Contreversy</span>
   </div>
 </div>
 
@@ -72,14 +96,28 @@ body, html {
        Word Count:
        Multimedia Minutes:
        Process Paper Word Count: </pre>
-  </div>
+  
+  
+
+
+
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+
+  </div>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
 <script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
